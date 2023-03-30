@@ -7,7 +7,7 @@ function createGalleryItem(items) {
     return items
         .map(({preview,original,description})=>{
             return `<div class="gallery__item">
-                        <a class="gallery__link" href="#"
+                        <a class="gallery__link" href="#">
                             <img class="gallery__image"
                             src="${preview}"
                             data-original="${original}"
@@ -16,6 +16,7 @@ function createGalleryItem(items) {
                     </div>`;
         })
         .join("");
+    }
         const addGalleryItem = createGalleryItem(galleryItems);
         galleryElem.insertAdjacentHTML("beforeend", addGalleryItem);
         
