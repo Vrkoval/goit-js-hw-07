@@ -6,14 +6,11 @@ const galleryElem=document.querySelector(".gallery");
 function createGalleryItem(items) {
     return items
         .map(({preview,original,description})=>{
-            return `<div class="gallery__item">
-                        <a class="gallery__link" href="#">
-                            <img class="gallery__image"
-                            src="${preview}"
-                            data-original="${original}"
-                            alt="${description}">
-                        </a>
-                    </div>`;
+            return `<li class="gallery__item">
+            <a class="gallery__link" href="${preview}">
+            <img class="gallery__image" src="${original}" alt="${description}" title=""/>
+            </a>
+                    </li>`;
         })
         .join("");
     }
@@ -23,4 +20,5 @@ function createGalleryItem(items) {
         const lightboxGallery = new SimpleLightbox(".gallery a", {
             captionsData: "alt",
             captionDelay: 250,
+
           });
