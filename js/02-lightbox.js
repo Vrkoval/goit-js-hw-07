@@ -20,10 +20,7 @@ function createGalleryItem(items) {
         const addGalleryItem = createGalleryItem(galleryItems);
         galleryElem.insertAdjacentHTML("beforeend", addGalleryItem);
         
-        var lightbox = new SimpleLightbox(".gallery a", {
-            captionPosition: 'bottom',
-            captionsData: 'alt',
+        const lightboxGallery = new SimpleLightbox(".gallery a", {
+            captionsData: "alt",
             captionDelay: 250,
-            close: false,
-            enableKeyboard: true,
           });
